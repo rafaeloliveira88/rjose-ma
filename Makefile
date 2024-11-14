@@ -6,7 +6,7 @@
 #    By: rjose-ma <rjose-ma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 18:42:51 by rafael            #+#    #+#              #
-#    Updated: 2024/11/14 15:34:56 by rjose-ma         ###   ########.fr        #
+#    Updated: 2024/11/14 16:15:19 by rjose-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME = libftprintf.a
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
-SRCS =		ft_isin.c ft_printf.c ft_dec_to_hex_pointer.c \
+SRCS =		ft_printf.c ft_dec_to_hex_pointer.c \
 			ft_putnbr_u.c ft_dec_to_hex.c ft_putchar.c  \
 			ft_putnbr.c ft_putstr.c
 

@@ -6,7 +6,7 @@
 /*   By: rjose-ma <rjose-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:37:00 by rafael            #+#    #+#             */
-/*   Updated: 2024/11/14 15:33:23 by rjose-ma         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:16:28 by rjose-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_process_variables(char type, va_list args)
 		return (ft_dec_to_hex(va_arg(args, long), 1));
 	else if (type == '%')
 		return (ft_putchar('%'));
-	return (0);
+	return (1);
 }
 
 int	ft_printf(const char *f, ...)
@@ -44,13 +44,12 @@ int	ft_printf(const char *f, ...)
 		return (-1);
 	while (*f)
 	{
-		if (*f == '%' && ft_isin(*(f + 1), "cspdiuxX%"))
+		if (*f == '%')
 		{
-			count += ft_process_variables(*(f + 1), list);
-			f = f + 2;
-		}
-		else if (*f == '%' && !*(f + 1))
+			f++;	
+			count += ft_process_variables(*(f), list);
 			f++;
+		}
 		else
 		{
 			f += ft_putchar(f[0]);

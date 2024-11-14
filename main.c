@@ -6,7 +6,7 @@
 /*   By: rjose-ma <rjose-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:46:08 by mlameira          #+#    #+#             */
-/*   Updated: 2024/11/14 13:23:42 by rjose-ma         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:20:43 by rjose-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,5 +125,10 @@ int main()
 	ft_printf("ft_printf: %x %p\t", (void *)rb, (int)pt);
 	printf("Original: %x %p\t", (void *)rb, (int)pt);
 	
+	printf("\nTest[21]:");
+	printf("Testing %%s with address of NULL\n");
+	char	*p = NULL;
+	ft_printf("ft_printf: %s", p);
+	printf("Original: %s", p);
 	return 0;
 }
