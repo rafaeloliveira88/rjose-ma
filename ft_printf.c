@@ -6,7 +6,7 @@
 /*   By: rjose-ma <rjose-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:37:00 by rafael            #+#    #+#             */
-/*   Updated: 2024/11/14 16:16:28 by rjose-ma         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:32:09 by rjose-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ static int	ft_process_variables(char type, va_list args)
 	else if (type == 'u')
 		return (ft_putnbr_u(va_arg(args, unsigned long)));
 	else if (type == 'x')
-		return (ft_dec_to_hex(va_arg(args, long), 0));
+		return (ft_putnbr_hex(va_arg(args, long), 0));
 	else if (type == 'X')
-		return (ft_dec_to_hex(va_arg(args, long), 1));
+		return (ft_putnbr_hex(va_arg(args, long), 1));
 	else if (type == '%')
 		return (ft_putchar('%'));
 	return (1);
